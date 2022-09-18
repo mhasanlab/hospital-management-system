@@ -14,7 +14,7 @@ namespace HospitalAPI.Models.Class
         //Foreign Key
         [Required, ForeignKey("MedicalTest")]
         public int MedicalTestCode { get; set; }
-        [Required,DataType(DataType.Date),Display(Name ="Test Date"),DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
+        [Required,DataType(DataType.Date),Display(Name ="Test Date")]
         public DateTime TestDate { get; set; }
         //Foreign Key
         [Required, ForeignKey("Patient")]
@@ -23,7 +23,7 @@ namespace HospitalAPI.Models.Class
         public decimal Height { get; set; }
         [Required,StringLength(3,ErrorMessage = "Weight can't be more than 3 Digit")]
         public decimal Weight { get; set; }
-        [Required]
+        [Required, Display(Name = "Blood Pressure")]
         public decimal BloodPressure { get; set; }
         [Required, Range(2, 4), Display(Name = "Blood Group")]
         public string BloodGroup { get; set; }
