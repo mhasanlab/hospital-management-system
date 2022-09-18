@@ -10,7 +10,9 @@ namespace HospitalAPI.Models.Class
     {
         [Key]
         public int DepartmentId { get; set; }
+        [Required, StringLength(50)]
         public string DepName { get; set; }
+        [Required, StringLength(50)]
         public string DepManeger { get; set; }
 
         //Nev
