@@ -18,7 +18,9 @@ namespace HospitalAPI.Models.Class
         [Required, ForeignKey("Supplier")]
         public int SupplierId { get; set; }
         public double Quantity { get; set; }
+        [Column(TypeName ="date"),Display(Name="Production Date"),DisplayFormat(DataFormatString ="{0:yyyy-MM-dd}",ApplyFormatInEditMode =true)]
         public DateTime ProductionDate { get; set; }
+        [Column(TypeName ="date"),Display(Name="Expire Date"),DisplayFormat(DataFormatString ="{0:yyyy-MM-dd}",ApplyFormatInEditMode =true)]
         public DateTime ExpirDate { get; set; }
         public bool Availability { get; set; }
 
