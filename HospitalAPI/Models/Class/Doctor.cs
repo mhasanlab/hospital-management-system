@@ -10,12 +10,15 @@ namespace HospitalAPI.Models.Class
     {
         [Key]
         public int DoctorId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Specialist { get; set; }
 
-        // Nev
+        [Required, StringLength(100), Display(Name = "First Name")]
+        public string FirstName { get; set; }
+
+        [Required, StringLength(100), Display(Name = "Last Name")]
+        public string LastName { get; set; }
+
+        public string Specialist { get; set; }
+        //nev
         public virtual ICollection<Appointment> Appointments { get; set; }
-        public virtual ICollection<PatientReport> PatientReports { get; set; }
     }
 }
