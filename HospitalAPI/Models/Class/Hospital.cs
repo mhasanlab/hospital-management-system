@@ -14,11 +14,11 @@ namespace HospitalAPI.Models.Class
         public string HospitalName { get; set; }
         [Required, StringLength(50), Display(Name = "Hospital Type")]
         public string HospitalType { get; set; }
-        [Required, StringLength(150), Display(Name = "Area")]
+        [Required, StringLength(200)]
         public string Area { get; set; }
-        [Required, StringLength(150), Display(Name = "Road")]
+        [Required, StringLength(50)]
         public string Road { get; set; }
-        [Required, StringLength(50), Display(Name = "Country")]
+        [Required, StringLength(50)]
         public string Country { get; set; }
 
         // Nev
