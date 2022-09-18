@@ -14,10 +14,16 @@ namespace HospitalAPI.Models.Class
         //Foreign Key
         [Required, ForeignKey("Employee")]
         public int EmployeeId { get; set; }
+        
+        [Required, Display(Name ="Salary")]
+
         public decimal BasicSalary { get; set; }
+        [Required, Display(Name ="Bonus Salary")]
         public decimal BonusSalary { get; set; }
+        [Required, Display(Name ="Compenstation")]
         public decimal Compenstation { get; set; }
         public int AccountNo { get; set; }
+        [Required, Display(Name = "Net Salary")]
         public decimal NetSalary { get; set; }
 
         //Nev
