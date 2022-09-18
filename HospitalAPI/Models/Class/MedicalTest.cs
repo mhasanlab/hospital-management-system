@@ -10,7 +10,9 @@ namespace HospitalAPI.Models.Class
     {
         [Key]
         public int MedicalTestCode { get; set; }
+        [Required, StringLength(50),Display(Name ="Test Name")]
         public string TestName { get; set; }
+        [Required, Display(Name = "Test Price")]
         public decimal TestPrice { get; set; }
 
         //Nev
