@@ -10,9 +10,13 @@ namespace HospitalAPI.Models.Class
     {
         [Key]
         public int RoomId { get; set; }
+        [Required,Display(Name ="Room Type")]
         public string RoomType { get; set; }
+        [Required, Display(Name = "Room Charge")]
         public decimal RoomCharge { get; set; }
+        [Required, Display(Name = "Room Location")]
         public string RoomLocation { get; set; }
+        [Required,StringLength(5)]
         public bool Availability { get; set; }
 
         // Nev
