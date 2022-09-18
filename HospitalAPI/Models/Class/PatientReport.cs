@@ -17,6 +17,7 @@ namespace HospitalAPI.Models.Class
         //Foreign Key
         [Required, ForeignKey("MedicalTest")]
         public int MedicalTestCode { get; set; }
+        [Required]
         public string Diagnose { get; set; }
         //Foreign Key
         [Required, ForeignKey("Doctor")]
